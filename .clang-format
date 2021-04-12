@@ -5,3 +5,4 @@ BraceWrapping:
     BeforeElse: true
     BeforeCatch: true
 AlignAfterOpenBracket: DontAlign
+AlignTrailingComments: false

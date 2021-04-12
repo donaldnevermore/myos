@@ -4,4 +4,4 @@ project(myos C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(myos
-        p1.c)
+        p3.c)

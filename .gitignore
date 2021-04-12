@@ -4,4 +4,4 @@
 .vs/
 
 # CMake
-cmake-build**/
+cmake-build-*/
