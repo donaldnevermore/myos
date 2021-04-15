@@ -4,4 +4,4 @@ project(myos C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(myos
-        p3.c)
+        cpu_api/p3.c)
