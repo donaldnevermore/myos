@@ -1,4 +1,4 @@
-#include "cpu_api/q1.c"
+#include "cpu_api/q2.c"
 
 int main(int argc, char *argv[]) {
     run();
