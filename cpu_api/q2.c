@@ -1,5 +1,6 @@
 #include <fcntl.h>
 #include <stdio.h>
+#include <sys/wait.h>
 #include <unistd.h>
 
 void run(void) {
@@ -13,6 +14,8 @@ void run(void) {
         printf("hello, I am child (pid:%d)\n", (int)getpid());
     }
     else {
+        // Uncomment to fix it.
+        // int rc_wait = wait(NULL);
         printf("hello, I am parent of %d (pid:%d)\n", rc, (int)getpid());
     }
 }
