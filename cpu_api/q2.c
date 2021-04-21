@@ -1,5 +1,6 @@
 #include <fcntl.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <sys/wait.h>
 #include <unistd.h>
@@ -10,7 +11,12 @@ void run(void) {
 
     write(fd, "hello\n", strlen("hello\n"));
 
-    if (rc == 0) {
+    if (rc < 0) {
+        // fork failed
+        fprintf(stderr, "fork failed\n");
+        exit(1);
+    }
+    else if (rc == 0) {
         write(fd, "child\n", strlen("child\n"));
         printf("hello, I am child (pid:%d)\n", (int)getpid());
     }
@@ -20,4 +26,6 @@ void run(void) {
         write(fd, "parent\n", strlen("parent\n"));
         printf("hello, I am parent of %d (pid:%d)\n", rc, (int)getpid());
     }
+
+    close(fd);
 }
