@@ -5,7 +5,7 @@
 
 static void sigcont_handler() { printf("goodbye\n"); }
 
-void run() {
+void run(void) {
     int parent_id = getpid();
     int rc = fork();
 
