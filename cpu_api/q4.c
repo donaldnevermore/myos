@@ -4,7 +4,6 @@
 #include <string.h>
 #include <sys/wait.h>
 #include <unistd.h>
-#define _GNU_SOURCE
 
 void run(void) {
     int rc = fork();
@@ -21,6 +20,7 @@ void run(void) {
         // execl("/bin/ls", "ls", "-l", "-a", "-h", NULL);
         // execle("/bin/ls", "ls", "-l", "-a", "-h", NULL, envp);
         // execlp("ls", "ls", "-l", "-a", "-h", NULL);
+
         // execv("/bin/ls", argvs);
         // execvp("ls", argvs);
         execvpe("ls", argvs, envp);
