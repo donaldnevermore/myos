@@ -15,5 +15,6 @@ int main(int argc, char *argv[]) {
         // Spin(1);
         printf("%s\n", str);
     }
+
     return 0;
 }

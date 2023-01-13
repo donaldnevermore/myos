@@ -1,7 +1,8 @@
 # IDEs
-.vscode/
-.idea/
-.vs/
+/.vscode
+/.idea
+/.vs
 
 # CMake
-cmake-build-*/
+/cmake-build-*
+/build
