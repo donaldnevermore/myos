@@ -1,9 +1,6 @@
 BasedOnStyle: LLVM
 IndentWidth: 4
 ColumnLimit: 120
-BreakBeforeBraces: Custom
-BraceWrapping:
-    BeforeElse: true
-    BeforeCatch: true
 AlignAfterOpenBracket: DontAlign
 AlignTrailingComments: false
+AllowShortFunctionsOnASingleLine: None

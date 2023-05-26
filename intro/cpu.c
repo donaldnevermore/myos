@@ -1,8 +1,9 @@
-// #include "common.h"
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/time.h>
+
+#include "../include/common.h"
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
@@ -12,7 +13,7 @@ int main(int argc, char *argv[]) {
 
     char *str = argv[1];
     for (;;) {
-        // Spin(1);
+        Spin(1);
         printf("%s\n", str);
     }
 

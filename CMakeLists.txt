@@ -1,12 +1,14 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.25)
 project(myos VERSION 0.1.0)
 
-set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD 17)
+set(CMAKE_C_STANDARD_REQUIRED True)
 
 include(CTest)
 enable_testing()
 
-add_executable(myos main.c)
+set(CMAKE_C_FLAGS "-Wall")
+add_executable(myos cpu_api/p3.c)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
