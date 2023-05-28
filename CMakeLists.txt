@@ -8,7 +8,7 @@ include(CTest)
 enable_testing()
 
 set(CMAKE_C_FLAGS "-Wall")
-add_executable(myos cpu_api/p3.c)
+add_executable(myos cpu_api/p4.c)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
