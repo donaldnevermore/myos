@@ -4,18 +4,16 @@
 #include <unistd.h>
 
 void run(void) {
-    int rc = fork();
+    pid_t rc = fork();
 
     if (rc < 0) {
         fprintf(stderr, "fork failed\n");
-        exit(1);
-    }
-    else if (rc == 0) {
-        int rc_wait = wait(NULL);
+        exit(EXIT_FAILURE);
+    } else if (rc == 0) {
+        pid_t rc_wait = wait(NULL);
         printf("child wait: %d\n", rc_wait);
-    }
-    else {
-        int rc_wait = wait(NULL);
+    } else {
+        pid_t rc_wait = wait(NULL);
         printf("parent wait: %d\n", rc_wait);
     }
 }
