@@ -7,7 +7,7 @@ set(CMAKE_C_STANDARD_REQUIRED True)
 include(CTest)
 enable_testing()
 
-set(CMAKE_C_FLAGS "-Wall")
+set(CMAKE_C_FLAGS "-Wall -pthread")
 add_executable(myos main.c)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

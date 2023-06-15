@@ -1,4 +1,4 @@
-#include "./cpu_mechanisms/hw.c"
+#include "./threads_intro/t1.c"
 
 int main(int argc, char *argv[]) {
   run();
