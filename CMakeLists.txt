@@ -1,8 +1,9 @@
-cmake_minimum_required(VERSION 3.28.0)
-project(myos VERSION 0.1.0 LANGUAGES C)
+cmake_minimum_required(VERSION 3.31)
+project(myos VERSION 0.1.0)
 
 set(CMAKE_C_STANDARD 23)
 set(CMAKE_C_STANDARD_REQUIRED True)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_C_FLAGS "-Wall -pthread")
 
 add_executable(myos main.c)
